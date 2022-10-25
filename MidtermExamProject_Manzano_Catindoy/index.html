@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MidTerm Exam">
+    <meta http-equiv="author" content="John Paul Manzano BSCS3A">
+    <meta http-equiv="author" content="Luis Catindoy BSCS3A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Cash Register</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <section class="content">
+                <h1>Simple Cash Register</h1>
+                <p>
+                    Enter the total amount of the bill and the customer's cash to determine the minimum quantity of notes to be returned.
+                </p>
+            </section>
+            <form id="bill-form">
+                <div class="form-group">
+                    <label for="bill-amount">Bill Amount</label>
+                    <input 
+                        type="text" 
+                        name="bill_amount" 
+                        id="bill-amount" 
+                        placeholder="0.0"
+                        pattern="[0-9]+" 
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="cash-amount">Cash Amount</label>
+                    <input 
+                        type="text" 
+                        name="cash_amount" 
+                        id="cash-amount" 
+                        placeholder="0.0"
+                        pattern="[0-9]+" 
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <button type="submit">CHECK</button>
+                </div>
+            </form>
+            <p class="invalid-input">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, ex!
+            </p>
+            <section class="output">
+                <h2>Return Change</h2>
+                <table class="notes">
+                    <tbody>
+                        <tr id="note-values"> 
+                            <th>NUMBER OF NOTES</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr> 
+                            <th>NOTES</th>
+                            <td>2000</td>
+                            <td>500</td>
+                            <td>100</td>
+                            <td>20</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p id="copyright">&copy; | 2022 | TOPZmetal Channel</p>
+        </footer>
+    </div>
+    <script src="js/cashRegister.js"></script>
+</body>
+</html>
